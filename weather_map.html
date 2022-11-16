@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Project</title>
+    <script src="js/keys.js"></script>
+    <link rel="icon" href="img/weather_favicon.ico">
+    <!--Map Box -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--Mapbox Geocoder-->
+    <script src="js/mapbox-geocoder-utils.js"></script>
+    <!--Custom CSS-->
+    <style>
+        #map {
+            width: 90%;
+            height: 25rem;
+        }
+    </style>
+
+</head>
+<body>
+<!--Header-->
+    <nav class="navbar navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Weather App</span>
+            <span class="justify-content-end navbar-text mb-0 h6" id="currentCity"><!--Current City gets appended here--></span>
+        </div>
+    </nav>
+<!--Search Form-->
+<form class="row mx-3 mt-2">
+    <label for="setMarker" class="form-label text-nowrap">Enter A City or Address</label>
+    <div class="d-flex mb-3 col-sm-12 col-md-6 col-xxl-3">
+        <input type="text" name="setMarker" id="setMarker" class="form-control">
+        <button class="btn btn-primary mx-2" id="setMarkerButton">Find</button>
+    </div>
+
+</form>
+<!--The Card Group for the 5 day Forecast-->
+    <div class="card-group">
+        <div class="card text-center">
+
+            <h5 class="card-header" id="nameTheDay1" >
+                <!--Adding The Named Day here-->
+            </h5>
+            <h6 class="card-subtitle mt-1 text-muted date" id="day-1">
+                <!--Adding Date from Forecast here-->
+            </h6>
+
+            <div  id="today">
+                <!---Adding All the Data from Weather Here-->
+            </div>
+        </div>
+        <div class="card text-center">
+
+            <h5 class="card-header" id="nameTheDay2">
+                <!--Adding The Named Day here-->
+            </h5>
+            <h6 class="card-subtitle mt-1 text-muted date" id="day-2">
+                <!--Append Date from forecast here-->
+            </h6>
+            <div id="day2">
+                <!---Adding All the Data from forecast Here-->
+            </div>
+        </div>
+        <div class="card text-center">
+
+            <h5 class="card-header" id="nameTheDay3">
+                <!--Adding The Named Day here-->
+            </h5>
+            <h6 class="card-subtitle mt-1 text-muted date" id="day-3">
+                <!--Append Date from forecast here-->
+            </h6>
+            <div id="day3">
+                <!---Adding All the Data from forecast Here-->
+            </div>
+        </div>
+        <div class="card text-center">
+            <h5 class="card-header" id="nameTheDay4">
+                <!--Adding The Named Day here-->
+            </h5>
+            <h6 class="card-subtitle mt-1 text-muted date" id="day-4">
+                <!--Append Date from forecast here-->
+            </h6>
+            <div id="day4">
+                <!---Adding All the Data from forecast Here-->
+            </div>
+        </div>
+        <div class="card text-center">
+
+            <h5 class="card-header" id="nameTheDay5">
+                <!--Adding The Named Day here-->
+            </h5>
+            <h6 class="card-subtitle mt-1 text-muted date" id="day-5">
+                <!--Append Date from forecast here-->
+            </h6>
+            <div id="day5">
+                <!---Adding All the Data from forecast Here-->
+            </div>
+        </div>
+
+    </div><!--Closing div for the entire card-group -->
+
+
+<!--The Mapbox Container lives here-->
+<div id='map' class="d-flex mx-auto mt-4 mb-3"></div>
+
+
+
+<!--jQuery-->
+<script src="js/jquery-3.6.1.js"></script>
+
+<!--Boot Strap JavaScript-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<!--Weather Map js-->
+<script src="js/weather_map.js"></script>
+</body>
+</html>
